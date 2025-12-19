@@ -1,0 +1,16 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files
+Icon?
+# Thumbnails
+._*
+
+# Spotlight files
+.Spotlight-V100
+.Trashes
+
+# Time Machine
+.fseventsd
