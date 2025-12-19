@@ -1,0 +1,141 @@
+Description: demotest
+Author: Venor AB
+Version: 1.0
+Id: 6dd0659c-73af-412e-912f-4dfebc530af0
+RecreateDirectories: true
+Targets:
+    -
+        Name: Antivirus
+        Category: Targets
+        Path: Antivirus.tkape
+    -
+        Name: EventLogs
+        Category: Targets
+        Path: EventLogs.tkape
+    -
+        Name: EvidenceOfExecution
+        Category: Targets
+        Path: EvidenceOfExecution.tkape
+    -
+        Name: FileSystem
+        Category: Targets
+        Path: FileSystem.tkape
+    -
+        Name: LNKFilesAndJumpLists
+        Category: Targets
+        Path: LNKFilesAndJumpLists.tkape
+    -
+        Name: PowerShellConsole
+        Category: Targets
+        Path: PowerShellConsole.tkape
+    -
+        Name: RecycleBin_InfoFiles
+        Category: Targets
+        Path: RecycleBin_InfoFiles.tkape
+    -
+        Name: RegistryHives
+        Category: Targets
+        Path: RegistryHives.tkape
+    -
+        Name: RemoteAccess
+        Category: Targets
+        Path: RemoteAdmin.tkape
+    -
+        Name: ScheduledTasks
+        Category: Targets
+        Path: ScheduledTasks.tkape
+    -
+        Name: SRUM
+        Category: Targets
+        Path: SRUM.tkape
+    -
+        Name: SUM
+        Category: Targets
+        Path: SUM.tkape
+    -
+        Name: WebBrowsers
+        Category: Targets
+        Path: WebBrowsers.tkape
+    -
+        Name: WindowsTimeline
+        Category: Targets
+        Path: WindowsTimeline.tkape
+    -
+        Name: Apache Access Logs
+        Category: Logs
+        Path: ApacheAccessLog.tkape
+    -
+        Name: IIS Logs
+        Category: Logs
+        Path: IISLogFiles.tkape
+    -
+        Name: NGINX Logs
+        Category: Logs
+        Path: NGINXLogs.tkape
+    -
+        Name: MSSQL Error Logs
+        Category: Logs
+        Path: MSSQLErrorLog.tkape
+    -
+        Name: CombinedLogs
+        Category: WindowsLogs
+        Path: CombinedLogs.tkape
+    -
+        Name: WindowsIndexSearch
+        Category: FileKnowledge
+        Path: WindowsIndexSearch.tkape
+    -
+        Name: BITS
+        Category: Targets
+        Path: BITS.tkape
+    -
+        Name: Certutil
+        Category: Targets
+        Path: Certutil.tkape
+    -
+        Name: CloudStorage_Metadata
+        Category: Targets
+        Path: CloudStorage_Metadata.tkape
+    -
+        Name: Drivers
+        Category: Targets
+        Path: Drivers.tkape
+    -
+        Name: GroupPolicy
+        Category: Targets
+        Path: GroupPolicy.tkape
+    -
+        Name: HostsFile
+        Category: Targets
+        Path: HostsFile.tkape
+    -
+        Name: MOF
+        Category: Targets
+        Path: MOF.tkape
+    -
+        Name: Notepad
+        Category: Targets
+        Path: Notepad.tkape
+    -
+        Name: StartupInfo
+        Category: Targets
+        Path: StartupInfo.tkape
+    -
+        Name: StartupFolders
+        Category: Targets
+        Path: StartupFolders.tkape
+    -
+        Name: WBEM
+        Category: Targets
+        Path: WBEM.tkape
+    -
+        Name: WER
+        Category: Targets
+        Path: WER.tkape
+    -
+        Name: MyPSTranscripts
+        Category: CustomData
+        Path: Local\MyPSTranscripts.tkape
+
+# Documentation
+# N/A
