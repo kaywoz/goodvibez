@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>loot</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      background-color: #000;            /* full black background */
+      color: #eee;                       /* light text for contrast */
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      margin: 2rem;
+    }
+    header {
+      display: flex;
+      align-items: baseline;
+      gap: .75rem;
+    }
+    pre {
+      background: #111;
+      color: #eee;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow: auto;
+    }
+    .muted {
+      color: #888;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>logs</h1>
+    <img src="https://i.ibb.co/yFhL3sh5/BCO-373f30c3-f690-4d4b-b17b-c52ac8351403.png"
+         style="width:175px;height:175px;">
+    <span class="muted" id="ts"></span>
+  </header>
+  <pre id="out">Loading…</pre>
+
+  <script>
+    async function load() {
+      const out = document.getElementById('out');
+      const ts  = document.getElementById('ts');
+      try {
+        const res = await fetch('dump.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        try {
+          const obj = JSON.parse(text);
+          out.textContent = JSON.stringify(obj, null, 2);
+        } catch {
+          out.textContent = text; // not JSON? show raw
+        }
+        ts.textContent = 'Last updated: ' + new Date().toLocaleString();
+      } catch (e) {
+        out.textContent = 'no logs available: ' + e.message;
+      }
+    }
+    load();
+    setInterval(load, 10000); // refresh every 10s
+  </script>
+</body>
+</html>
